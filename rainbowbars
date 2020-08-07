@@ -1,0 +1,131 @@
+		local UserName = game:GetService('Players').LocalPlayer.Name;
+		local CE = {}
+		local yes = "800"
+		local Variables = {
+			workspace = game:GetService("Workspace"),
+			players = game:GetService("Players")
+		}
+		local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.players.LocalPlayer.Character
+		local HeadPos = MainUserW.Head.Position
+		function CE:FireEvent(ItemName, Object, Property, Value)
+			MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty", {
+				["Value"] = Value,
+				["Property"] = Property,
+				["Object"] = Object
+			})
+		end
+ 
+
+		function zigzag(X)
+			return math.acos(math.cos(X * math.pi)) / math.pi
+		end
+		counter = 0
+		MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+		game.workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+		CE:FireEvent("PompousTheCloud", MainUserW["PompousTheCloud"]["Handle"]["Mesh"], "MeshId", "0")
+		CE:FireEvent("PompousTheCloud", MainUserW["PompousTheCloud"]["LocalScript"], "Disabled", true)
+		game:GetService("ReplicatedStorage"):FindFirstChild("AvatarEditor"):FindFirstChild("HatHandle"):FireServer(14129625)
+		wait()
+		CE:FireEvent("PompousTheCloud", MainUserW:WaitForChild("14129625")["Handle"]["Mesh"], "MeshType", "Brick")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Offset", Vector3.new(2.6, -4, 3))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Scale", Vector3.new(.50,.2,.45))
+                CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "BrickColor", BrickColor.new("Really black"))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "Material", "Neon")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"], "Name", "Bar1")
+		MainUserW["PhantomMask"]:Destroy()
+		game:GetService("ReplicatedStorage"):FindFirstChild("AvatarEditor"):FindFirstChild("HatHandle"):FireServer(14129625)
+		wait()
+		CE:FireEvent("PompousTheCloud", MainUserW:WaitForChild("14129625")["Handle"]["Mesh"], "MeshType", "Brick")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Offset", Vector3.new(-3, -4, 3))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Scale", Vector3.new(.50,.2,.45))
+                CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "BrickColor", BrickColor.new("Really black"))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "Material", "Neon")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"], "Name", "Bar2")
+		MainUserW["PhantomMask"]:Destroy()
+		game:GetService("ReplicatedStorage"):FindFirstChild("AvatarEditor"):FindFirstChild("HatHandle"):FireServer(14129625)
+		wait()
+		CE:FireEvent("PompousTheCloud", MainUserW:WaitForChild("14129625")["Handle"]["Mesh"], "MeshType", "Brick")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Offset", Vector3.new(5.7, -4, 1))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Scale", Vector3.new(.50,.2,.45))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "BrickColor", BrickColor.new("Really black"))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "Material", "Neon")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"], "Name", "Bar3")
+		MainUserW["PhantomMask"]:Destroy()
+		game:GetService("ReplicatedStorage"):FindFirstChild("AvatarEditor"):FindFirstChild("HatHandle"):FireServer(14129625)
+		wait()
+		CE:FireEvent("PompousTheCloud", MainUserW:WaitForChild("14129625")["Handle"]["Mesh"], "MeshType", "Brick")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Offset", Vector3.new(-6, -4, 1))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"]["Mesh"], "Scale", Vector3.new(.50,.2,.45))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "BrickColor", BrickColor.new("Really black"))
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"]["Handle"], "Material", "Neon")
+		CE:FireEvent("PompousTheCloud", MainUserW["14129625"], "Name", "Bar4")
+		MainUserW["PhantomMask"]:Destroy()
+		wait()
+               
+		CE:FireEvent("PompousTheCloud",MainUserW["SuperFlyGoldBoombox"]["Handle"],"Transparency","1")
+		CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"],"Transparency","1")
+		game:GetService("RunService").RenderStepped:Connect(function()
+			local vol = math.floor(MainUserW["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"].PlaybackLoudness)/yes
+			CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"]["Mesh"], "Scale", Vector3.new(1.4, math.random(0.7, 20) * vol, 0.3))
+			CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"]["Mesh"], "Scale", Vector3.new(1.4, math.random(1, 20) * vol, 0.3))
+			CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"]["Mesh"], "Scale", Vector3.new(1.4, math.random(0.7, 20) * vol, 0.3))
+			CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"]["Mesh"], "Scale", Vector3.new(1.4, math.random(0.7, 20) * vol, 0.3))
+			counter = counter + 0.005 
+		end)
+while true do
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"Color",Color3.new(255/255,0/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"Color",Color3.new(255/255,0/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"Color",Color3.new(255/255,0/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"Color",Color3.new(255/255,0/255,0/255))
+	for i = 0,255,10 do
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"Color",Color3.new(255/255,i/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"Color",Color3.new(255/255,i/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"Color",Color3.new(255/255,i/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"Color",Color3.new(255/255,i/255,0/255)) 
+	end
+	for i = 255,0,-10 do
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"Color",Color3.new(i/255,255/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"Color",Color3.new(i/255,255/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"Color",Color3.new(i/255,255/255,0/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"Color",Color3.new(i/255,255/255,0/255))
+        end
+	for i = 0,255,10 do
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"Color",Color3.new(0/255,255/255,i/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"Color",Color3.new(0/255,255/255,i/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"Color",Color3.new(0/255,255/255,i/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"Color",Color3.new(0/255,255/255,i/255))
+        end
+	for i = 0,255,-10 do
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"Color",Color3.new(0/255,i/255,255/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"Color",Color3.new(0/255,i/255,255/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"Color",Color3.new(0/255,i/255,255/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"Color",Color3.new(0/255,i/255,255/255))
+	end
+	for i = 255,0,10 do
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"Color",Color3.new(i/255,0/255,255/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"Color",Color3.new(i/255,0/255,255/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"Color",Color3.new(i/255,0/255,255/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"Color",Color3.new(i/255,0/255,255/255))
+	end
+	for i = 0,255,-10 do
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"Color",Color3.new(255/255,0/255,i/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"Color",Color3.new(255/255,0/255,i/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"Color",Color3.new(255/255,0/255,i/255))
+		CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"Color",Color3.new(255/255,0/255,i/255))
+	end
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"BrickColor",BrickColor.new("Dark blue"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"BrickColor",BrickColor.new("Dark blue"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"BrickColor",BrickColor.new("Dark blue"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"BrickColor",BrickColor.new("Dark blue"))
+	wait(2)
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"BrickColor",BrickColor.new("Royal purple"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"BrickColor",BrickColor.new("Royal purple"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"BrickColor",BrickColor.new("Royal purple"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"BrickColor",BrickColor.new("Royal purple"))
+	wait(2)
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar1"]["Handle"],"BrickColor",BrickColor.new("Pink"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar2"]["Handle"],"BrickColor",BrickColor.new("Pink"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar3"]["Handle"],"BrickColor",BrickColor.new("Pink"))
+	CE:FireEvent("PompousTheCloud", MainUserW["Bar4"]["Handle"],"BrickColor",BrickColor.new("Pink"))
+	wait(2)
+end
